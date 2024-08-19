@@ -67,7 +67,7 @@ body{
 
 .contentCarrito{
     width: 500px;
-    height: 100px;
+    height: 50px;
     /* background: red; */
     margin-top: 100px;
     margin-left: 200px;
@@ -81,13 +81,17 @@ body{
     width: 100%;
     height: 50px;
     background: black;
+    /* border-top-left-radius: 20px; */
+    border-radius: 20px 20px 0px 0;
 }
 
 .contentCarrito .resumenCarrito{
     width: 100%;
-    height: 100%;
+    /* height: 50%; */
     background: gray;
     padding: 0 20px;
+    border-radius: 0 0 20px 20px;
+    /* padding-bottom: 20px; */
 }
 
 .contentCarrito .resumenCarrito .articulo{
@@ -95,6 +99,7 @@ body{
     height: 100px;
     background: white;
     margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     /* flex-direction: column; */
     align-items: center;
@@ -137,6 +142,7 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .productCountContainer .plus {
@@ -152,6 +158,7 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .productCountContainer .cantidad{
