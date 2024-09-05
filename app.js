@@ -114,7 +114,7 @@
         console.log(precio);
         console.log(imagen);
         
-        
+    
         
         
     }
