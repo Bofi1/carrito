@@ -25,6 +25,14 @@
         
     }
 
+    //agrego funcionalidad a los botones de agregar carrito
+    let botonesAgregarCarrito = document.getElementsByClassName("addCart")
+    for (let i = 0; i < botonesAgregarCarrito.length; i++) {
+        let button = botonesAgregarCarrito[i]
+        button.addEventListener("click",agregarAlCarritoClicked)
+    }
+
+
 
     // Elimino el item seleccionado del carrito
     function eliminarItemCarrito(event) {
@@ -94,6 +102,20 @@
 
         actualizarTotalCarrito()
 
+    }
+
+    function agregarAlCarritoClicked(event) {
+        let button = event.target
+        let selector = button.parentElement
+        let titulo = selector.getElementsByClassName("titulo-producto")[0].innerHTML // recuerda usar [0] para que no se haga un psh arrays todo pendejo
+        console.log(titulo);
+        let precio = selector.getElementsByClassName("precio-producto")[0].innerHTML
+        let imagen = selector.getElementsByClassName("imagen-producto")[0].src
+        console.log(precio);
+        console.log(imagen);
+        
+        
+        
     }
 
     
