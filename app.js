@@ -122,6 +122,7 @@
     function agregarItemAlCarrito(titulo, precio, imagen) {
         var item = document.createElement("div")
         item.classList.add ("item")
+        let contenedorItem = document.getElementsByClassName
         
         // vamos a comprobar que el item que se esta seleccionando no se encuentre ya en el carrito
         let nombreItemsCarrito = document.getElementsByClassName("item-titulo")
@@ -146,6 +147,8 @@
                 <span><img class="btn-eliminar"  style="width: 20px; height: 20px; margin-left: 20px;" src="./img/trashCan.png" alt=""></span>
             </div>
         `
+
+        itemCarritoContenido = contenedor; // no definida
         
     }
 
