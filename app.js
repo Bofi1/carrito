@@ -114,8 +114,38 @@
         console.log(precio);
         console.log(imagen);
         
-    
+        //esta funcion agrega el elemento al carrito. Le mando por parametros los valores
+        agregarItemAlCarrito(titulo, precio, imagen)
         
+    }
+    
+    function agregarItemAlCarrito(titulo, precio, imagen) {
+        var item = document.createElement("div")
+        item.classList.add ("item")
+        
+        // vamos a comprobar que el item que se esta seleccionando no se encuentre ya en el carrito
+        let nombreItemsCarrito = document.getElementsByClassName("item-titulo")
+        for (let i = 0; i < nombreItemsCarrito.length; i++) {
+            if (nombreItemsCarrito[i].innerHTML == titulo) {
+                alert("El item ya se encuentra en el carrito")
+                return
+            }
+            
+        }
+
+        let itemCarritoContenido = `
+            <div class="articulo">
+                <h3 class="item-titulo">${titulo}</h3>
+                <img src="${imagen}" alt="">
+                <div class="productCountContainer">
+                    <div class="minus">-</div>
+                    <div class="cantidad">2</div>
+                    <div class="plus">+</div>
+                </div>
+                <span class="price">${precio}</span>
+                <span><img class="btn-eliminar"  style="width: 20px; height: 20px; margin-left: 20px;" src="./img/trashCan.png" alt=""></span>
+            </div>
+        `
         
     }
 
